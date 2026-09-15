@@ -373,37 +373,52 @@ The main processed result files used for the manuscript are stored in `results/`
 
 ---
 
-# Key Quantities
+## Key Quantities
 
-## Search-Space Expansion Penalty
+### Search-Space Expansion Penalty
 
-For nested spaces \(S_i \subset S_j\), the expansion penalty at budget \(B\) is defined as
+For nested spaces $S_i \subset S_j$, the expansion penalty at budget $B$ is defined as
 
-\[
+$$
 \Delta_{\mathrm{exp}}(S_i,S_j,B)
 =
 \mathbb{E}[P_A(S_i,B)]
 -
 \mathbb{E}[P_A(S_j,B)].
-\]
+$$
 
 A positive value indicates that the larger search space produced lower realized performance.
 
-## Paradox Incidence
+### Paradox Incidence
 
-\[
+The paradox incidence is defined as
+
+$$
 \pi_{ij}(B)
 =
 \Pr\left[P_A(S_j,B) < P_A(S_i,B)\right].
-\]
+$$
 
-This measures how often the larger space performs worse than the smaller one across paired experimental runs.
+This measures how often the larger search space performs worse than the smaller one across paired experimental runs.
 
-## Recovery
+### Recovery Budget
 
-Recovery is evaluated using the smallest tested budget after which the expansion penalty remains non-positive for all larger tested budgets.
+The sustained recovery budget is defined as
 
-If no such point occurs within the tested range, recovery is reported as exceeding the maximum tested budget.
+$$
+B^*_{ij}
+=
+\min
+\left\{
+B \in \mathcal{B} :
+\Delta_{\mathrm{exp}}(B') \leq 0
+\;\; \forall B' \geq B
+\right\}.
+$$
+
+This is the smallest tested budget after which the larger search space no longer has a positive expansion penalty at any subsequent tested checkpoint.
+
+If recovery does not occur within the tested range, it is reported as exceeding the largest tested budget.
 
 ---
 
