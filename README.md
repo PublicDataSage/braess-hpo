@@ -379,13 +379,8 @@ The main processed result files used for the manuscript are stored in `results/`
 
 For nested spaces $S_i \subset S_j$, the expansion penalty at budget $B$ is defined as
 
-$$
-\Delta_{\mathrm{exp}}(S_i,S_j,B)
-=
-\mathbb{E}[P_A(S_i,B)]
--
-\mathbb{E}[P_A(S_j,B)].
-$$
+<img width="310" height="23" alt="image" src="https://github.com/user-attachments/assets/9ef568db-259e-4129-82ed-faf80eec6aa8" />
+
 
 A positive value indicates that the larger search space produced lower realized performance.
 
@@ -393,11 +388,8 @@ A positive value indicates that the larger search space produced lower realized 
 
 The paradox incidence is defined as
 
-$$
-\pi_{ij}(B)
-=
-\Pr\left[P_A(S_j,B) < P_A(S_i,B)\right].
-$$
+<img width="261" height="31" alt="image" src="https://github.com/user-attachments/assets/0eb48089-0463-411d-ae6a-11bf7ccb010b" />
+
 
 This measures how often the larger search space performs worse than the smaller one across paired experimental runs.
 
@@ -405,16 +397,8 @@ This measures how often the larger search space performs worse than the smaller 
 
 The sustained recovery budget is defined as
 
-$$
-B^*_{ij}
-=
-\min
-\left\{
-B \in \mathcal{B} :
-\Delta_{\mathrm{exp}}(B') \leq 0
-\;\; \forall B' \geq B
-\right\}.
-$$
+<img width="306" height="28" alt="image" src="https://github.com/user-attachments/assets/656d2667-ee1b-4552-8239-18127be29735" />
+
 
 This is the smallest tested budget after which the larger search space no longer has a positive expansion penalty at any subsequent tested checkpoint.
 
