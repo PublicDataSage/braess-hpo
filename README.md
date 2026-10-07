@@ -451,7 +451,7 @@ Large intermediate files, caches, failed pilot runs, and temporary experiment fo
 
 The code accompanies the manuscript:
 
-> **A Braess-Like Effect in Hyperparameter Optimization: Search-Space Expansion, Dilution, and Recovery Under Computational Constraints**
+> **A Braess-Like Effect in Hyperparameter Optimization Under Finite Compute**
 
 If you use this repository or build on the experimental framework, please cite the corresponding paper.
 
